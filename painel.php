@@ -1,7 +1,5 @@
 <?php 
-    if(!isset($_SESSION)){
-        session_start();
-    }
+   include('protect.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -12,6 +10,10 @@
     <title>Painel</title>
 </head>
 <body>
-    Bem vindo ao PAinel, <?php echo $_SESSION['nome']; ?>
+    Bem vindo ao Painel, <?php echo $_SESSION['nome']; ?>
+
+    <p>
+        <a href="logout.php">Sair</a>
+    </p>
 </body>
 </html>
