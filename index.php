@@ -7,25 +7,25 @@
         }else if(strlen($_POST['senha']) == 0){
             echo "preencha sua senha";
         }else{
-            $email = $myswli->real_escape_string($_POST['email']);
-            $senha = $myswli->real_escape_string($_POST['senha']);
+            $email = $mysqli->real_escape_string($_POST['email']);
+            $senha = $mysqli->real_escape_string($_POST['senha']);
 
             $sql_code = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
-            $sql_query = $mysql->query($sql_code) or die("Falha na execução do sql");
+            $sql_query = $mysqli->query($sql_code) or die("Falha na execução do sql");
 
             $quantidade = $sql_query->num_rows;
 
             if($quantidade == 1){
-                $usuario = $aql_query->fetch_assoc();
+                $usuario = $sql_query->fetch_assoc();
 
                 if(!isset($_SESSION)){
                     session_start();
                 }
 
                 $_SESSION['id'] = $usuario['id'];
-                $_SESSION['name'] = $usuario['nome'];
+                $_SESSION['nome'] = $usuario['nome'];
 
-                header("location: painel.php");
+                header("Location: painel.php");
 
             }else{
                 echo "Email ou senha incorretos";
@@ -43,7 +43,7 @@
 </head>
 <body>
     <h1>Acesse sua conta</h1>
-    <form action="" mehod="POST">
+    <form action="" method="POST">
         <p>
             <label>Email</label>
             <input type="text" name="email">
