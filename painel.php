@@ -13,7 +13,7 @@
     Bem vindo ao Painel, <?php echo $_SESSION['nome']; ?>
 
     <p>
-        <a href="logout.php">Sair</a>
+        <a href="logout.php"><button>Sair</button></a>
     </p>
 </body>
 </html>

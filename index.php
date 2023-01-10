@@ -54,6 +54,7 @@
         </p>
         <p>
             <button type="submit">Entrar</button>
+            <p><a href="cadastro.php" style="text-decoration:none">Não tem login? cadastre-se</a></p>
         </p>
     </form>
 </body>
