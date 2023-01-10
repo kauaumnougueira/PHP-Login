@@ -20,7 +20,7 @@
     </p>
     <p>
         <label>Senha</label>
-        <input type="text" name="senha"> 
+        <input type="password" name="senha"> 
     </p>
     <p>
         <button type="submit">Cadastrar</button>

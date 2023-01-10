@@ -1,15 +1,13 @@
-<?php 
-    include('conexao.php');
-   
-    if (isset($_POST['submit'])) {
-        $nome = $_POST['nome'];
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
-        $sql = "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
-        $result = mysqli_query($mysqli, $sql);
-        if ($result) {
-            header("Location: index.php");
-        } else {
-            echo "Falha ao criar usuário";
-        }
+<?php
+require_once 'crud.php';
+
+if($_POST) {
+    $name = $_POST['nome'];
+    $email = $_POST['email'];
+    $password = $_POST['senha'];
+    if(createUser($name, $email, $password)) {
+        echo "User was created.";
+    } else {
+        echo "Error".$mysqli->error;
     }
+}
