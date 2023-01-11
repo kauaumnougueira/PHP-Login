@@ -15,12 +15,10 @@
                 manage_session();
             }
 
-            
-
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['nome'] = $usuario['nome'];
 
-            header("Location: painel.php");
+            header("Location: http://localhost/PHP-Login/painel.php");
 
         }else{
             echo "Email ou senha incorretos";

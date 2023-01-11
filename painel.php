@@ -1,5 +1,5 @@
 <?php 
-   include('protect.php');
+   include('controller\protect.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -13,7 +13,7 @@
     Bem vindo ao Painel, <?php echo $_SESSION['nome']; ?>
 
     <p>
-        <a href="logout.php"><button>Sair</button></a>
+        <a href="http://localhost/PHP-Login/controller/logout.php"><button>Sair</button></a>
     </p>
 </body>
 </html>

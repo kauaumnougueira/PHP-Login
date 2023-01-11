@@ -1,5 +1,5 @@
 <?php 
-    include('conexao.php');
+    include('C:\xampp\htdocs\PHP-Login\model\banco\conexao.php');
    
    // Create new user
     function createUser($nome, $email, $senha) {

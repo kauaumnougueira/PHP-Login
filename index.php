@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Acesse sua conta</h1>
-    <form action="login.php" method="POST">
+    <form action="http://localhost/PHP-Login/controller/login.php" method="POST">
         <p>
             <label>Email</label>
             <input type="text" name="email">
@@ -19,7 +19,7 @@
         </p>
         <p>
             <button type="submit">Entrar</button>
-            <p><a href="cadastro.php" style="text-decoration:none">Não tem login? cadastre-se</a></p>
+            <p><a href="http://localhost/PHP-Login/cadastro.php" style="text-decoration:none">Não tem login? cadastre-se</a></p>
         </p>
     </form>
 </body>

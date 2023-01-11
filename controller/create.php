@@ -1,6 +1,6 @@
 <?php
-require_once 'crud.php';
-include('identificacao_banco.php');
+include('C:\xampp\htdocs\PHP-Login\model\DAO\crud.php');
+include('C:\xampp\htdocs\PHP-Login\model\banco\identificacao_banco.php');
 
 if($_POST) {
     $name = $_POST['nome'];

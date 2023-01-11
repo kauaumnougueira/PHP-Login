@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +7,25 @@
     <title>Cadstro</title>
 </head>
 <body>
-    <form action="create.php" method="POST">
+    <h1>CADASTRE-SE AQUI</h1>
+    <form action="http://localhost/PHP-Login/controller/create.php" method="POST">
 
-    <p>
-        <label>Nome</label>
-        <input type="text" name="nome"> 
-    </p>
+        <p>
+            <label>Nome</label>
+            <input type="text" name="nome"> 
+        </p>
 
-    <p>
-        <label>Email</label>
-        <input type="text" name="email"> 
-    </p>
-    <p>
-        <label>Senha</label>
-        <input type="password" name="senha"> 
-    </p>
-    <p>
-        <button type="submit">Cadastrar</button>
-    </p>
+        <p>
+            <label>Email</label>
+            <input type="text" name="email"> 
+        </p>
+        <p>
+            <label>Senha</label>
+            <input type="password" name="senha"> 
+        </p>
+        <p>
+            <button type="submit">Cadastrar</button>
+        </p>
     </form>
 </body>
 </html>

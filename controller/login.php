@@ -1,6 +1,6 @@
 <?php
-    include('conexao.php');
-    include('identificacao_banco.php');
+    include('../model/banco/conexao.php');
+    include('../model/banco/identificacao_banco.php');
 
     if(isset($_POST['email']) || isset($_POST['senha'])){
         if(strlen($_POST['email']) == 0){
