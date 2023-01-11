@@ -13,11 +13,15 @@
     }
 
     // Read user
-    function readUser($id) {
+    function readUsers() {
         global $mysqli;
-        $sql = "SELECT * FROM usuarios WHERE id = $id";
+        $sql = "SELECT * FROM usuarios ORDER BY id";
         $result = $mysqli->query($sql);
-        return $result->fetch_assoc();
+        $users = array();
+        while ($row = $result->fetch_assoc()) {
+            $users[] = $row;
+        }
+        return $users;
     }
 
     // Update user
