@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>CADASTRE-SE AQUI</h1>
-    <form action="http://localhost/PHP-Login/controller/create.php" method="POST">
+    <form action="http://localhost/PHP-Login/controller/cadastra.php" method="POST">
 
         <p>
             <label>Nome</label>
