@@ -9,11 +9,11 @@ if($_POST) {
 
     if(isset($_POST['email']) || isset($_POST['senha']) || isset($_POST['nome'])){
         if(strlen($_POST['nome']) == 0){
-            echo "preencha seu nome";
+            echo "<script>alert('preencha seu nome'); window.location.replace('http://localhost/PHP-Login/cadastro.php');</script>";
         }else if(strlen($_POST['email']) == 0){
-            echo "preencha sua email";
+            echo "<script>alert('preencha sua email'); window.location.replace('http://localhost/PHP-Login/cadastro.php');</script>";
         }else if(strlen($_POST['senha']) == 0){
-            echo "preencha seu senha";
+            echo "<script>alert('preencha seu senha'); window.location.replace('http://localhost/PHP-Login/cadastro.php');</script>";
         }else{
             if(createUser($name, $email, $senha)) {
                 echo "Usuario foi criado.";
@@ -22,9 +22,6 @@ if($_POST) {
             } else{
                 echo "Error em: ".$mysqli->error;
             }
-        
         }
     }
-
-    
 }

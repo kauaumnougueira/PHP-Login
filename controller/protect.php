@@ -5,5 +5,5 @@
     }
 
     if(!isset($_SESSION['id'])){
-        die("Você não pode acessar pois não esta logado. <p><a href=\"index.php\"><button>Entrar</button></a></p>");
+        die("<script>alert('Você não pode acessar pois não esta logado.'); window.location.replace('http://localhost/PHP-Login/index.php');</script>");
     }

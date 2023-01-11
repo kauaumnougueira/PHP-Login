@@ -1,6 +1,10 @@
 <?php
     include('C:\xampp\htdocs\PHP-Login\model\DAO\crud.php');
+    include('controller\protect.php');
+    
     $users = readUsers();
+    echo '<div id="login">';
+    echo '<div class="card" style="width:400px">';
     echo '<h1 style="font-size: 22px">Selecione abaixo os que deseja deletar</h1>';
     echo '<table>';
     echo '<thead>';
@@ -19,11 +23,15 @@
         echo '<td>' . $user['id'] . '</td>';
         echo '<td>' . $user['nome'] . '</td>';
         echo '<td>' . $user['email'] . '</td>';
-        echo '</tr>';
+        echo '</tr>'; 
     }
 
     echo '</tbody>';
     echo '</table>';
+    echo '<input type="submit" value="Deletar" id="delete-button"  class="submit" style="margin-right: 150px">';
+    echo '<a href="http://localhost/PHP-Login/controller/logout.php"><input type="submit" value="Sair" id="saida"  class="submit" style="margin-left: 150px"></a>';
+    echo '</div>';
+    echo '</div>';
 ?>
 
 <!DOCTYPE html>
@@ -32,10 +40,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="view\style.css">
     <title>Tabela</title>
 </head>
-<body>
-    <button id="delete-button">Deletar</button>
+<body style="color: #fff" class="#login">
     <script>
         document.getElementById('delete-button').addEventListener('click', function() {
             // Step 2: Capturando IDs dos usuários selecionados
